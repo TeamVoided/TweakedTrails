@@ -1,4 +1,4 @@
-package org.teamvoided.tweaked_trails.mixin;
+package org.teamvoided.tweaked_trials.mixin;
 
 import net.minecraft.block.TrialSpawnerData;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,4 +1,4 @@
-package org.teamvoided.tweaked_trails
+package org.teamvoided.tweaked_trials
 
 import com.mojang.serialization.Codec
 import com.mojang.serialization.MapCodec

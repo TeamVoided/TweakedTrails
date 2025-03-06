@@ -1,10 +1,10 @@
-package org.teamvoided.tweaked_trails
+package org.teamvoided.tweaked_trials
 
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes
 import net.minecraft.particle.ParticleType
 import net.minecraft.registry.Registries
 import net.minecraft.registry.Registry
-import org.teamvoided.tweaked_trails.Template.id
+import org.teamvoided.tweaked_trials.TweakedTrials.id
 
 object TTParticles {
 
