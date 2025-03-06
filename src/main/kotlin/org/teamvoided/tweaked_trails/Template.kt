@@ -13,6 +13,7 @@ object Template {
 
     fun init() {
         log.info("Hello from Common")
+        TTParticles.init()
     }
 
     fun id(path: String) = Identifier.of(MODID, path)

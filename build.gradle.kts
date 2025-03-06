@@ -33,7 +33,7 @@ modSettings {
     entrypoint("fabric-datagen", "org.teamvoided.tweaked_trails.data.gen.TemplateData")
 
     mixinFile("${modId()}.client.mixins.json")
-//    mixinFile("${modId()}.mixins.json")
+    mixinFile("${modId()}.mixins.json")
 //    accessWidener("${modId()}.accesswidener")
 }
 
