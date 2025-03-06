@@ -5,7 +5,10 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "TrialSpawnerDataAccessor",
-    "TrialSpawnerStateMixin"
+    "TrialSpawnerStateMixin",
+    "VaultBlockEntity$ServerMixin",
+    "VaultBlockEntityMixin",
+    "VaultServerDataMixin"
   ],
   "injectors": {
     "defaultRequire": 1
