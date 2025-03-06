@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.teamvoided.tweaked_trials.SpawnerBeamEmitterParticleEffect;
+import org.teamvoided.tweaked_trials.particle.SpawnerBeamEmitterParticleEffect;
 
 import java.util.List;
 import java.util.UUID;

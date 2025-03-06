@@ -1,4 +1,4 @@
-package org.teamvoided.tweaked_trials
+package org.teamvoided.tweaked_trials.particle
 
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment

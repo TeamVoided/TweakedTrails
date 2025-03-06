@@ -12,7 +12,7 @@ object TweakedTrials {
     val log: Logger = LoggerFactory.getLogger(TweakedTrials::class.simpleName)
 
     fun init() {
-        log.info("Hello from Common")
+        log.info("Your trials will be tweaking now!")
         TTParticles.init()
     }
 

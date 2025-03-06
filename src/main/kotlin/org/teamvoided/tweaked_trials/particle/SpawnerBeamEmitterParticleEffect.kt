@@ -1,4 +1,4 @@
-package org.teamvoided.tweaked_trials
+package org.teamvoided.tweaked_trials.particle
 
 import com.mojang.serialization.Codec
 import com.mojang.serialization.MapCodec
@@ -9,6 +9,7 @@ import net.minecraft.network.codec.PacketCodecs
 import net.minecraft.particle.ParticleEffect
 import net.minecraft.particle.ParticleType
 import net.minecraft.util.math.Vec3d
+import org.teamvoided.tweaked_trials.TTParticles
 
 class SpawnerBeamEmitterParticleEffect(
     val pos: Vec3d,
