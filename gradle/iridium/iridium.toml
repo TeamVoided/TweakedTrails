@@ -1,6 +1,6 @@
-projectTitle = "Team Voided Template"
-modId = "template"
-githubRepo = "Teamvoided/TeamVoidedTemplateMod"
+projectTitle = "Tweaked Trails"
+modId = "tweaked_trails"
+githubRepo = "Teamvoided/TweakedTrails"
 discordServerInviteId = "KZ5Q364hEg"
 authors = [ "TheEnderCore" ]
 majorMinecraftVersion = "1.21"

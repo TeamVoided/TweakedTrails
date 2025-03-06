@@ -1,6 +1,6 @@
-package org.teamvoided.template
+package org.teamvoided.tweaked_trails
 
-import org.teamvoided.template.Template.log
+import org.teamvoided.tweaked_trails.Template.log
 
 @Suppress("unused")
 object TemplateClient{
