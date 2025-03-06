@@ -22,6 +22,10 @@ val curse_id: String? by project
 repositories {
     maven("https://teamvoided.org/releases")
     maven("https://maven.terraformersmc.com/") { name = "Terraformers" }
+    maven {
+        name = "FzzyMaven"
+        url = uri("https://maven.fzzyhmstrs.me/")
+    }
     mavenCentral()
 }
 
@@ -33,7 +37,6 @@ modSettings {
 
 //    mixinFile("${modId()}.client.mixins.json")
     mixinFile("${modId()}.mixins.json")
-//    accessWidener("${modId()}.accesswidener")
 }
 
 dependencies {
@@ -42,6 +45,8 @@ dependencies {
 
     modCompileOnly("${libs.emi.get()}:api")
     modLocalRuntime(libs.emi)
+
+    modImplementation(libs.fzzy.config)
 }
 
 loom {
