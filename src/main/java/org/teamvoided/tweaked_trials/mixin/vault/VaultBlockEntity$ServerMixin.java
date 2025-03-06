@@ -1,4 +1,4 @@
-package org.teamvoided.tweaked_trials.mixin;
+package org.teamvoided.tweaked_trials.mixin.vault;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.VaultBlockEntity;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.teamvoided.tweaked_trials.VaultServerDataAccess;
+import org.teamvoided.tweaked_trials.misc.VaultServerDataAccess;
 
 import java.util.Map;
 import java.util.UUID;

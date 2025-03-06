@@ -1,4 +1,4 @@
-package org.teamvoided.tweaked_trials.mixin;
+package org.teamvoided.tweaked_trials.mixin.vault;
 
 import net.minecraft.block.entity.VaultBlockEntity;
 import net.minecraft.nbt.NbtCompound;
@@ -12,10 +12,12 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.teamvoided.tweaked_trials.VaultServerDataAccess;
+import org.teamvoided.tweaked_trials.misc.VaultServerDataAccess;
 
 import java.util.Map;
 import java.util.UUID;
+
+import static org.teamvoided.tweaked_trials.misc.ConstKt.COOLDOWN_KEY;
 
 @Mixin(VaultBlockEntity.class)
 public class VaultBlockEntityMixin {
@@ -35,15 +37,15 @@ public class VaultBlockEntityMixin {
                 compound.putLong("time", value);
                 cooldowns.add(compound);
             });
-            nbt.put("tweakedTrails$playerCooldowns", cooldowns);
+            nbt.put(COOLDOWN_KEY, cooldowns);
         }
     }
 
     @Inject(method = "readNbtImpl", at = @At("TAIL"))
     private void readCooldowns(NbtCompound nbt, HolderLookup.Provider lookupProvider, CallbackInfo ci) {
-        if (nbt.contains("tweakedTrails$playerCooldowns")) {
+        if (nbt.contains(COOLDOWN_KEY)) {
             Map<UUID, Long> playerCooldowns = ((VaultServerDataAccess) field_48866).tweakedTrails$getPlayerCooldowns();
-            NbtList cooldowns = nbt.getList("tweakedTrails$playerCooldowns", NbtElement.COMPOUND_TYPE);
+            NbtList cooldowns = nbt.getList(COOLDOWN_KEY, NbtElement.COMPOUND_TYPE);
 
             for (int i = 0; i < cooldowns.size(); i++) {
                 NbtCompound compound = cooldowns.getCompound(i);

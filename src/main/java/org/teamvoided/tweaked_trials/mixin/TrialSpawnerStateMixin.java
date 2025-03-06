@@ -49,7 +49,7 @@ public abstract class TrialSpawnerStateMixin {
 
     @ModifyReturnValue(method = "getEntityRotationSpeed", at = @At("RETURN"))
     private double modifyRotationSpeed(double speed) {
-        return speed <= 0 ? 200 : speed;
+        return speed < 0 ? 100 : speed;
     }
 
     @ModifyReturnValue(method = "hasRotatingEntity", at = @At("RETURN"))

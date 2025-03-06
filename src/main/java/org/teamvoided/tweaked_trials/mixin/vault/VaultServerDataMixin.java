@@ -1,4 +1,4 @@
-package org.teamvoided.tweaked_trials.mixin;
+package org.teamvoided.tweaked_trials.mixin.vault;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.entity.player.PlayerEntity;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.teamvoided.tweaked_trials.VaultServerDataAccess;
+import org.teamvoided.tweaked_trials.misc.VaultServerDataAccess;
 
 import java.util.*;
 
