@@ -6,9 +6,9 @@
   "mixins": [
     "TrialSpawnerDataAccessor",
     "TrialSpawnerStateMixin",
-    "vault.VaultBlockEntity$ServerMixin",
     "vault.VaultBlockEntityMixin",
-    "vault.VaultServerDataMixin"
+    "vault.VaultServerDataMixin",
+    "vault.VaultSharedDataMixin"
   ],
   "injectors": {
     "defaultRequire": 1

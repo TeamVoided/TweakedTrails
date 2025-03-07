@@ -18,6 +18,8 @@ import org.teamvoided.tweaked_trials.particle.SpawnerBeamEmitterParticleEffect;
 import java.util.List;
 import java.util.UUID;
 
+import static org.teamvoided.tweaked_trials.TweakedTrials.config;
+
 @Mixin(TrialSpawnerState.class)
 public abstract class TrialSpawnerStateMixin {
 
@@ -27,8 +29,9 @@ public abstract class TrialSpawnerStateMixin {
 
     @Inject(method = "tick", at = @At("RETURN"))
     public void tickEntityConnection(BlockPos pos, TrialSpawnerLogic logic, ServerWorld world, CallbackInfoReturnable<TrialSpawnerState> cir) {
+        if (!config.getSpawnBeamParticles()) return;
         RandomGenerator random = world.random;
-        if (random.nextInt(100) == 0 && spawnCapable) {
+        if (random.nextInt(config.getBeamParticleChance()) == 0 && spawnCapable) {
             List<UUID> currentMobs = ((TrialSpawnerDataAccessor) logic.getData()).getCurrentMobs().stream().toList();
 
             if (!currentMobs.isEmpty()) {
@@ -49,11 +52,11 @@ public abstract class TrialSpawnerStateMixin {
 
     @ModifyReturnValue(method = "getEntityRotationSpeed", at = @At("RETURN"))
     private double modifyRotationSpeed(double speed) {
-        return speed < 0 ? 100 : speed;
+        return speed < 0 ? config.getInactiveRotationSpeed() : speed;
     }
 
     @ModifyReturnValue(method = "hasRotatingEntity", at = @At("RETURN"))
     private boolean setAlwaysRotating(boolean original) {
-        return true;
+        return config.getShouldRotateWhenInactive();
     }
 }

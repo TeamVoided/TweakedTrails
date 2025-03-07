@@ -4,6 +4,7 @@ import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.unmapped.C_nsbycoiv;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -14,6 +15,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.teamvoided.tweaked_trials.misc.VaultServerDataAccess;
 
 import java.util.*;
+
+import static org.teamvoided.tweaked_trials.misc.TTConfigKt.getCooldown;
+import static org.teamvoided.tweaked_trials.TweakedTrials.config;
 
 @Mixin(C_nsbycoiv.class)
 public abstract class VaultServerDataMixin implements VaultServerDataAccess {
@@ -45,7 +49,7 @@ public abstract class VaultServerDataMixin implements VaultServerDataAccess {
 
     @Inject(method = "method_56775", at = @At("HEAD"), cancellable = true)
     private void replaceAddRewardedPlayer(PlayerEntity player, CallbackInfo ci) {
-        tweakedTrails$playerCooldowns.put(player.getUuid(), player.getWorld().getTime() + 6000);
+        tweakedTrails$playerCooldowns.put(player.getUuid(), player.getWorld().getTime() + getCooldown(config));
         if (tweakedTrails$playerCooldowns.size() > 128) {
             tweakedTrails$playerCooldowns.keySet().forEach(tweakedTrails$playerCooldowns::remove);
         }
@@ -63,7 +67,7 @@ public abstract class VaultServerDataMixin implements VaultServerDataAccess {
     }
 
     @Override
-    public Map<UUID, Long> tweakedTrails$getPlayerCooldowns() {
+    public @NotNull Map<UUID, Long> tweakedTrails$getPlayerCooldowns() {
         return tweakedTrails$playerCooldowns;
     }
 }
