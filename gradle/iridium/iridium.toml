@@ -2,7 +2,7 @@ projectTitle = "Tweaked Trials"
 modId = "tweaked_trials"
 githubRepo = "Teamvoided/TweakedTrials"
 discordServerInviteId = "KZ5Q364hEg"
-authors = [ "TheEnderCore" ]
+authors = [ "TheEnderCore", "DuskAutumntStorm", "MincraftEinstein" ]
 majorMinecraftVersion = "1.21"
 minecraftVersion = "1.21.1"
 fabricLoaderVersion = "0.16.10"
@@ -10,7 +10,7 @@ fabricApiVersion = "0.115.0+1.21.1"
 fabricLangKotlinVersion = "1.11.0+kotlin.2.0.0"
 license = "MIT"
 modules = [ ]
-modDescription = "Template Mod Description"
+modDescription = "A few tweaks to Tricky Trials update, including repeatedly openable vaults and entity particles"
 # Modmenu badges, values can be: [ library, deprecated ]
 badges = [ ]
 disableKotlin = false
