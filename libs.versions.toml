@@ -5,7 +5,7 @@ iridium = "3.3.2"
 
 modmenu = "11.0.3"
 emi = "1.1.18+1.21.1"
-fzzy-config = "0.6.4+1.21"
+fzzy-config = "0.6.7+1.21"
 
 [libraries]
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
