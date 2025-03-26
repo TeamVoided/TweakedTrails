@@ -57,6 +57,6 @@ public abstract class TrialSpawnerStateMixin {
 
     @ModifyReturnValue(method = "hasRotatingEntity", at = @At("RETURN"))
     private boolean setAlwaysRotating(boolean original) {
-        return config.getShouldRotateWhenInactive();
+        return config.getShouldRenderWhenInactive();
     }
 }

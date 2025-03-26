@@ -20,7 +20,7 @@ class TTConfig : Config(id(MODID)) {
 
     @Suppress("unused")
     var spawnerGroup = ConfigGroup("spawner", true)
-    var shouldRotateWhenInactive = true
+    var shouldRenderWhenInactive = true
 
     @ValidatedInt.Restrict(min = 0)
     var inactiveRotationSpeed = 50
