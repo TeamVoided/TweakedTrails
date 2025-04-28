@@ -10,7 +10,7 @@ import org.teamvoided.tweaked_trials.TweakedTrials.id
 
 class TTConfig : Config(id(MODID)) {
     @Suppress("unused")
-    var vaultGroup = ConfigGroup("vault", true)
+    var vaultGroup = ConfigGroup("vault", false)
 
     @ValidatedLong.Restrict(min = 1)
     var vaultCooldown: Long = 1
@@ -19,7 +19,7 @@ class TTConfig : Config(id(MODID)) {
     var timeType = TimeType.HOURS
 
     @Suppress("unused")
-    var spawnerGroup = ConfigGroup("spawner", true)
+    var spawnerGroup = ConfigGroup("spawner", false)
     var shouldRenderWhenInactive = true
 
     @ValidatedInt.Restrict(min = 0)

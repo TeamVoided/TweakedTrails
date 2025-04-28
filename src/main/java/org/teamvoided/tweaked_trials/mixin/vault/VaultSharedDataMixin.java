@@ -5,7 +5,6 @@ import net.minecraft.unmapped.C_cudfnjix;
 import net.minecraft.unmapped.C_czyoqmgb;
 import net.minecraft.unmapped.C_nsbycoiv;
 import net.minecraft.util.math.BlockPos;
-import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -17,7 +16,6 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-@Debug(export = true)
 @Mixin(C_czyoqmgb.class)
 public abstract class VaultSharedDataMixin {
     @Shadow
