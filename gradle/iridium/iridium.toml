@@ -1,13 +1,15 @@
 projectTitle = "Tweaked Trials"
 modId = "tweaked_trials"
+modVersion = "1.0.3"
+group = "org.teamvoided"
 githubRepo = "Teamvoided/TweakedTrials"
 discordServerInviteId = "KZ5Q364hEg"
 authors = [ "TheEnderCore", "DuskAutumntStorm", "MincraftEinstein" ]
 majorMinecraftVersion = "1.21"
 minecraftVersion = "1.21.1"
 fabricLoaderVersion = "0.16.10"
-fabricApiVersion = "0.115.0+1.21.1"
-fabricLangKotlinVersion = "1.11.0+kotlin.2.0.0"
+fabricApiVersion = "0.115.4+1.21.1"
+fabricLangKotlinVersion = "1.13.2+kotlin.2.1.20"
 license = "MIT"
 modules = [ ]
 modDescription = "A few tweaks to Tricky Trials update, including repeatedly openable vaults and entity particles"
